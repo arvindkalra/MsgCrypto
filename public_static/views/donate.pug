@@ -1,0 +1,35 @@
+html
+	head
+	title MsgCrypto
+	link(href="css/style.css" rel="stylesheet" type="text/css")
+	link(href="css/loader.css" rel="stylesheet" type="text/css")
+	body
+		div(class = "container")
+			div(class="logo")
+				span MSGCRYPTO
+			p Sending ETH to:
+				h4(id="address") #{address}
+
+			div(class="request_box")
+				div(class="input_box")
+					label Sending:
+					input(type="text" id="amount" value="0.1")
+					span(class="currency") ETH
+
+				div(class="input_box")
+					label From:
+					input(type="text" id="donor" maxlength="15" placeholder="anonymous (Max Length : 15)")
+
+				div(class="comment-label") Leave a message:
+				textarea(id="comment" placeholder="Your Message Goes Here... \n(Max Length : 100)" maxlength="100")
+				div(class="tip-button")
+				div(class="message")
+				div(class="loader-custom" id="loader")
+					div(class="loader-background")
+					div(class="container-other")
+						div(class="dot dot-1")
+						div(class="dot dot-2")
+						div(class="dot dot-3")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="javascript/pay_button.js")
+		script(src="javascript/only_float.js")
